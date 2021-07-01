@@ -15,7 +15,7 @@ class Category(models.Model):
 
 class Product(models.Model):
     name = models.CharField(max_length=255, null=False, blank=False)
-    Category = models.ManyToManyField(Category, related_name='products', null=False, blank=False)
+    category = models.ManyToManyField(Category, related_name='products', null=False, blank=False)
     price = models.PositiveIntegerField(null=False, blank=False)
     active = models.BooleanField(default=True)
 
